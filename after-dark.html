@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After Dark Mode - Crypto Cassie</title>
+    <meta name="description" content="Crypto Cassie After Dark - Mature content prompt generator with age verification. 18+ only.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/dark-theme.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme">
+    <!-- Age Verification Modal -->
+    <div id="ageVerificationModal" class="modal" style="display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 3000; align-items: center; justify-content: center;">
+        <div class="modal-content" style="background: var(--dark); color: var(--white); border-radius: var(--radius-lg); padding: var(--spacing-2xl); max-width: 500px; margin: var(--spacing-md); text-align: center; border: 2px solid var(--primary);">
+            <h2 style="color: var(--primary); margin-bottom: var(--spacing-lg);">🌙 After Dark Mode</h2>
+            <p style="margin-bottom: var(--spacing-lg); font-size: 1.1rem;">This section contains mature content and suggestive themes.</p>
+            <p style="margin-bottom: var(--spacing-xl); color: var(--text-light);">You must be 18 years or older to continue.</p>
+            
+            <div style="display: flex; gap: var(--spacing-md); justify-content: center;">
+                <button onclick="verifyAge(true)" class="btn btn-primary">I'm 18+ - Enter</button>
+                <button onclick="verifyAge(false)" class="btn btn-secondary">I'm Under 18 - Exit</button>
+            </div>
+            
+            <p style="margin-top: var(--spacing-lg); font-size: 0.9rem; color: var(--text-light);">
+                All content remains within platform policies and community guidelines.
+            </p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Crypto Cassie 🌙</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="prompts.html" class="nav-link">AI Prompts</a></li>
+                    <li><a href="character.html" class="nav-link">Character</a></li>
+                    <li><a href="after-dark.html" class="nav-link active">After Dark</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background: linear-gradient(135deg, #2C3E50, #8E44AD);">
+        <div class="container">
+            <div class="hero-content">
+                <h1>🌙 Cassie After Dark</h1>
+                <p>Mature content prompt generator with enhanced themes</p>
+                <div style="background: rgba(255, 255, 255, 0.1); padding: var(--spacing-md); border-radius: var(--radius-md); margin-top: var(--spacing-lg);">
+                    <p style="font-size: 0.9rem; margin: 0;">⚠️ 18+ Content - All prompts remain within platform policies</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- After Dark Generator -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="gap: var(--spacing-2xl);">
+                <!-- Generator Form -->
+                <div>
+                    <div class="card">
+                        <h2 style="margin-bottom: var(--spacing-xl); color: var(--primary);">🔥 Spicy Prompt Generator</h2>
+                        
+                        <form id="afterDarkForm">
+                            <!-- Custom Description -->
+                            <div class="form-group">
+                                <label for="darkCustomDescription" class="form-label">Scene Description</label>
+                                <textarea 
+                                    id="darkCustomDescription" 
+                                    class="form-textarea" 
+                                    placeholder="Describe the suggestive or alluring scene (e.g., 'posing confidently in elegant lingerie while explaining DeFi protocols')"
+                                    rows="3"
+                                ></textarea>
+                            </div>
+
+                            <!-- Scene Type -->
+                            <div class="form-group">
+                                <label for="darkSceneType" class="form-label">Scene Type</label>
+                                <select id="darkSceneType" class="form-select">
+                                    <option value="boudoir">Boudoir/Intimate</option>
+                                    <option value="seductive-tutorial">Seductive Tutorial</option>
+                                    <option value="lingerie">Lingerie Fashion</option>
+                                    <option value="sensual-dance">Sensual Dance</option>
+                                    <option value="bedroom">Bedroom Scene</option>
+                                    <option value="shower">Shower/Bath</option>
+                                    <option value="massage">Massage/Spa</option>
+                                    <option value="romantic-dinner">Romantic Dinner</option>
+                                    <option value="night-out">Night Out</option>
+                                    <option value="photoshoot">Suggestive Photoshoot</option>
+                                </select>
+                            </div>
+
+                            <!-- Intensity Level -->
+                            <div class="form-group">
+                                <label class="form-label">Intensity Level</label>
+                                <div class="intensity-toggles" style="display: flex; gap: var(--spacing-md); flex-wrap: wrap;">
+                                    <label class="intensity-option">
+                                        <input type="radio" name="intensity" value="mild" checked>
+                                        <span class="intensity-label">🌶️ Mild</span>
+                                    </label>
+                                    <label class="intensity-option">
+                                        <input type="radio" name="intensity" value="medium">
+                                        <span class="intensity-label">🌶️🌶️ Medium</span>
+                                    </label>
+                                    <label class="intensity-option">
+                                        <input type="radio" name="intensity" value="spicy">
+                                        <span class="intensity-label">🌶️🌶️🌶️ Spicy</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Mood Selection -->
+                            <div class="form-group">
+                                <label class="form-label">Mood & Attitude</label>
+                                <div class="mood-toggles" style="display: flex; gap: var(--spacing-md); flex-wrap: wrap;">
+                                    <label class="mood-option">
+                                        <input type="radio" name="mood" value="confident" checked>
+                                        <span class="mood-label">💪 Confident</span>
+                                    </label>
+                                    <label class="mood-option">
+                                        <input type="radio" name="mood" value="seductive">
+                                        <span class="mood-label">😘 Seductive</span>
+                                    </label>
+                                    <label class="mood-option">
+                                        <input type="radio" name="mood" value="playful">
+                                        <span class="mood-label">😈 Playful</span>
+                                    </label>
+                                    <label class="mood-option">
+                                        <input type="radio" name="mood" value="sultry">
+                                        <span class="mood-label">🔥 Sultry</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Outfit Style -->
+                            <div class="form-group">
+                                <label for="darkOutfitStyle" class="form-label">Attire Style</label>
+                                <select id="darkOutfitStyle" class="form-select">
+                                    <option value="lingerie">Elegant Lingerie</option>
+                                    <option value="silk-robe">Silk Robe/Sleepwear</option>
+                                    <option value="bodysuit">Fitted Bodysuit</option>
+                                    <option value="evening-dress">Revealing Evening Dress</option>
+                                    <option value="bikini">Designer Bikini</option>
+                                    <option value="workout-wear">Tight Workout Wear</option>
+                                    <option value="casual-revealing">Casual but Revealing</option>
+                                    <option value="auto">Auto-Select Based on Scene</option>
+                                </select>
+                            </div>
+
+                            <!-- Additional Options -->
+                            <div class="form-group">
+                                <label class="form-label">Enhancement Options</label>
+                                <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+                                    <label style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                                        <input type="checkbox" id="darkIncludeBackground">
+                                        <span>Include atmospheric background</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                                        <input type="checkbox" id="darkIncludeLighting">
+                                        <span>Include mood lighting details</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                                        <input type="checkbox" id="darkIncludeCamera">
+                                        <span>Include camera angle suggestions</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                                        <input type="checkbox" id="includeProps">
+                                        <span>Include scene props and accessories</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Generate Button -->
+                            <button type="submit" class="btn btn-primary" style="width: 100%; background: var(--gradient-primary);">
+                                🔥 Generate Spicy Prompt
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Generated Prompt Output -->
+                <div>
+                    <div class="card">
+                        <div class="code-header">
+                            <h3>Generated After Dark Prompt</h3>
+                            <div style="display: flex; gap: var(--spacing-sm);">
+                                <button id="copyDarkPromptBtn" class="copy-btn">📋 Copy</button>
+                                <button id="exportDarkHunyuanBtn" class="btn btn-accent" style="padding: var(--spacing-sm) var(--spacing-md); font-size: 0.9rem;">
+                                    🎥 Export for HunyuanVideo
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <code id="generatedDarkPrompt">
+Click "Generate Spicy Prompt" to create your custom After Dark prompt...
+                            </code>
+                        </div>
+                    </div>
+
+                    <!-- Content Warning -->
+                    <div class="card mt-lg" style="border-left: 4px solid #e74c3c;">
+                        <h4 style="color: #e74c3c;">⚠️ Content Guidelines</h4>
+                        <ul style="margin: var(--spacing-md) 0; color: var(--text-light);">
+                            <li>All content remains within platform policies</li>
+                            <li>Suggestive themes without explicit content</li>
+                            <li>Maintains Cassie's character consistency</li>
+                            <li>Suitable for AI video generation platforms</li>
+                            <li>18+ audience only</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spicy Templates -->
+    <section class="section" style="background: rgba(255, 255, 255, 0.05);">
+        <div class="container">
+            <h2 class="text-center mb-xl">🔥 Spicy Quick Templates</h2>
+            <div class="grid grid-3">
+                <div class="card template-card" data-template="boudoir-crypto">
+                    <h4>💎 Boudoir Crypto</h4>
+                    <p>Elegant boudoir scene with crypto education elements</p>
+                    <button class="btn btn-primary">Use Template</button>
+                </div>
+                
+                <div class="card template-card" data-template="seductive-tutorial">
+                    <h4>🎓 Seductive Tutorial</h4>
+                    <p>Educational content with alluring presentation</p>
+                    <button class="btn btn-primary">Use Template</button>
+                </div>
+                
+                <div class="card template-card" data-template="sensual-dance">
+                    <h4>💃 Sensual Dance</h4>
+                    <p>Sultry dance moves with confident attitude</p>
+                    <button class="btn btn-primary">Use Template</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Crypto Cassie Project. All rights reserved.</p>
+            <p>🌙 After Dark Mode - 18+ Content with Platform Policy Compliance</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/after-dark.js"></script>
+</body>
+</html>
+

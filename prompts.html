@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Prompt Generator - Crypto Cassie</title>
+    <meta name="description" content="Generate custom AI prompts for Crypto Cassie videos and content. Export to HunyuanVideo for seamless AI video generation.">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">Crypto Cassie</div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="prompts.html" class="nav-link active">AI Prompts</a></li>
+                    <li><a href="character.html" class="nav-link">Character</a></li>
+                    <li><a href="after-dark.html" class="nav-link">After Dark</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>🤖 AI Prompt Generator</h1>
+                <p>Create custom prompts for Crypto Cassie content with consistent character design</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompt Generator -->
+    <section class="section">
+        <div class="container">
+            <div class="grid grid-2" style="gap: var(--spacing-2xl);">
+                <!-- Generator Form -->
+                <div>
+                    <div class="card">
+                        <h2 style="margin-bottom: var(--spacing-xl);">Generate Custom Prompt</h2>
+                        
+                        <form id="promptForm">
+                            <!-- Custom Description -->
+                            <div class="form-group">
+                                <label for="customDescription" class="form-label">Custom Scene Description</label>
+                                <textarea 
+                                    id="customDescription" 
+                                    class="form-textarea" 
+                                    placeholder="Describe what Cassie is doing in this scene (e.g., 'explaining blockchain technology while sitting at a modern desk')"
+                                    rows="3"
+                                ></textarea>
+                            </div>
+
+                            <!-- Scene Type -->
+                            <div class="form-group">
+                                <label for="sceneType" class="form-label">Scene Type</label>
+                                <select id="sceneType" class="form-select">
+                                    <option value="tutorial">Tutorial/Educational</option>
+                                    <option value="beach">Beach/Outdoor</option>
+                                    <option value="dancing">Dancing/Movement</option>
+                                    <option value="casual">Casual Conversation</option>
+                                    <option value="workout">Fitness/Workout</option>
+                                    <option value="office">Office/Professional</option>
+                                    <option value="street">Street/Urban</option>
+                                    <option value="home">Home/Indoor</option>
+                                    <option value="crypto">Crypto Trading</option>
+                                    <option value="social">Social Media</option>
+                                </select>
+                            </div>
+
+                            <!-- Tone Selection -->
+                            <div class="form-group">
+                                <label class="form-label">Tone & Personality</label>
+                                <div class="tone-toggles" style="display: flex; gap: var(--spacing-md); flex-wrap: wrap;">
+                                    <label class="tone-option">
+                                        <input type="radio" name="tone" value="friendly" checked>
+                                        <span class="tone-label">😊 Friendly</span>
+                                    </label>
+                                    <label class="tone-option">
+                                        <input type="radio" name="tone" value="educational">
+                                        <span class="tone-label">🎓 Educational</span>
+                                    </label>
+                                    <label class="tone-option">
+                                        <input type="radio" name="tone" value="seductive">
+                                        <span class="tone-label">😘 Seductive</span>
+                                    </label>
+                                    <label class="tone-option">
+                                        <input type="radio" name="tone" value="playful">
+                                        <span class="tone-label">🎉 Playful</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Outfit Style -->
+                            <div class="form-group">
+                                <label for="outfitStyle" class="form-label">Outfit Style</label>
+                                <select id="outfitStyle" class="form-select">
+                                    <option value="streetwear">Streetwear (Urban/Casual)</option>
+                                    <option value="classy-casual">Classy Casual (Sophisticated)</option>
+                                    <option value="beachwear">Beachwear (Swimwear/Beach)</option>
+                                    <option value="auto">Auto-Select Based on Scene</option>
+                                </select>
+                            </div>
+
+                            <!-- Additional Options -->
+                            <div class="form-group">
+                                <label class="form-label">Additional Options</label>
+                                <div style="display: flex; flex-direction: column; gap: var(--spacing-sm);">
+                                    <label style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                                        <input type="checkbox" id="includeBackground">
+                                        <span>Include detailed background description</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                                        <input type="checkbox" id="includeLighting">
+                                        <span>Include lighting and mood details</span>
+                                    </label>
+                                    <label style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                                        <input type="checkbox" id="includeCamera">
+                                        <span>Include camera angle suggestions</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Generate Button -->
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                🎬 Generate Prompt
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Generated Prompt Output -->
+                <div>
+                    <div class="card">
+                        <div class="code-header">
+                            <h3>Generated Prompt</h3>
+                            <div style="display: flex; gap: var(--spacing-sm);">
+                                <button id="copyPromptBtn" class="copy-btn">📋 Copy</button>
+                                <button id="exportHunyuanBtn" class="btn btn-accent" style="padding: var(--spacing-sm) var(--spacing-md); font-size: 0.9rem;">
+                                    🎥 Export for HunyuanVideo
+                                </button>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <code id="generatedPrompt">
+Click "Generate Prompt" to create your custom Crypto Cassie prompt...
+                            </code>
+                        </div>
+                    </div>
+
+                    <!-- TTS Ready Format -->
+                    <div class="card mt-lg">
+                        <h4>TTS-Ready Format</h4>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Text-to-Speech Optimized</span>
+                                <button id="copyTTSBtn" class="copy-btn">📋 Copy TTS</button>
+                            </div>
+                            <code id="ttsPrompt">
+TTS version will appear here after generating a prompt...
+                            </code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prompt History -->
+    <section class="section" style="background: var(--light);">
+        <div class="container">
+            <h2 class="text-center mb-xl">Recent Prompts</h2>
+            <div id="promptHistory" class="grid grid-1" style="gap: var(--spacing-md);">
+                <!-- History items will be populated by JavaScript -->
+            </div>
+            <div class="text-center mt-lg">
+                <button id="clearHistoryBtn" class="btn btn-secondary">🗑️ Clear History</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Templates -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center mb-xl">Quick Templates</h2>
+            <div class="grid grid-3">
+                <div class="card template-card" data-template="crypto-tutorial">
+                    <h4>📚 Crypto Tutorial</h4>
+                    <p>Educational content about cryptocurrency basics</p>
+                    <button class="btn btn-primary">Use Template</button>
+                </div>
+                
+                <div class="card template-card" data-template="beach-fun">
+                    <h4>🏖️ Beach Fun</h4>
+                    <p>Playful beach scene with summer vibes</p>
+                    <button class="btn btn-primary">Use Template</button>
+                </div>
+                
+                <div class="card template-card" data-template="dance-party">
+                    <h4>💃 Dance Party</h4>
+                    <p>Energetic dancing and movement scene</p>
+                    <button class="btn btn-primary">Use Template</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HunyuanVideo Modal -->
+    <div id="hunyuanModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 2000; align-items: center; justify-content: center;">
+        <div class="modal-content" style="background: var(--white); border-radius: var(--radius-lg); padding: var(--spacing-2xl); max-width: 600px; margin: var(--spacing-md); max-height: 80vh; overflow-y: auto;">
+            <div class="modal-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-lg);">
+                <h3>🎥 HunyuanVideo Export</h3>
+                <button onclick="CryptoCassie.hideModal('hunyuanModal')" style="background: none; border: none; font-size: 1.5rem; cursor: pointer;">&times;</button>
+            </div>
+            
+            <div class="modal-body">
+                <p style="margin-bottom: var(--spacing-lg);">Your prompt has been prepared for HunyuanVideo! Follow these steps:</p>
+                
+                <div style="background: var(--light); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-bottom: var(--spacing-lg);">
+                    <h4>📝 Step 1: Download Prompt</h4>
+                    <p>Click the button below to download your prompt as a .txt file:</p>
+                    <button id="downloadPromptBtn" class="btn btn-primary">📥 Download Prompt.txt</button>
+                </div>
+                
+                <div style="background: var(--light); padding: var(--spacing-lg); border-radius: var(--radius-md); margin-bottom: var(--spacing-lg);">
+                    <h4>🔧 Step 2: Setup HunyuanVideo</h4>
+                    <p>If you haven't already, set up HunyuanVideo:</p>
+                    <ul style="margin: var(--spacing-md) 0; padding-left: var(--spacing-lg);">
+                        <li>Visit the <a href="https://github.com/Tencent/HunyuanVideo" target="_blank" style="color: var(--primary);">official GitHub repository</a></li>
+                        <li>Follow the installation instructions</li>
+                        <li>Set up your local environment or use a hosted service</li>
+                    </ul>
+                </div>
+                
+                <div style="background: var(--light); padding: var(--spacing-lg); border-radius: var(--radius-md);">
+                    <h4>🚀 Step 3: Generate Video</h4>
+                    <p>Upload your prompt file to HunyuanVideo and start generation:</p>
+                    <ul style="margin: var(--spacing-md) 0; padding-left: var(--spacing-lg);">
+                        <li>Load the downloaded prompt.txt file</li>
+                        <li>Adjust generation parameters as needed</li>
+                        <li>Start the video generation process</li>
+                        <li>Wait for your Crypto Cassie video to be created!</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Crypto Cassie Project. All rights reserved.</p>
+            <p>Generate consistent AI prompts for video creation</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/prompt-generator.js"></script>
+</body>
+</html>
+
