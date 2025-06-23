@@ -1,0 +1,196 @@
+/* Dark Theme for After Dark Mode */
+
+.dark-theme {
+    --light: #1a1a1a;
+    --white: #2d2d2d;
+    --text: #e0e0e0;
+    --text-light: #b0b0b0;
+    --dark: #0f0f0f;
+    
+    background-color: var(--dark);
+    color: var(--text);
+}
+
+.dark-theme .navbar {
+    background: rgba(45, 45, 45, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 107, 157, 0.3);
+}
+
+.dark-theme .hero {
+    background: linear-gradient(135deg, #2C3E50, #8E44AD) !important;
+}
+
+.dark-theme .card {
+    background: var(--white);
+    border: 1px solid rgba(255, 107, 157, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dark-theme .form-input,
+.dark-theme .form-textarea,
+.dark-theme .form-select {
+    background: var(--dark);
+    border-color: rgba(255, 107, 157, 0.3);
+    color: var(--text);
+}
+
+.dark-theme .form-input:focus,
+.dark-theme .form-textarea:focus,
+.dark-theme .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(255, 107, 157, 0.2);
+}
+
+.dark-theme .code-block {
+    background: var(--dark);
+    border: 1px solid rgba(255, 107, 157, 0.3);
+}
+
+.dark-theme .section {
+    background: transparent;
+}
+
+.dark-theme .footer {
+    background: var(--dark);
+    border-top: 1px solid rgba(255, 107, 157, 0.3);
+}
+
+/* Intensity and Mood Option Styling */
+.intensity-option,
+.mood-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border: 2px solid rgba(255, 107, 157, 0.3);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    background: rgba(255, 107, 157, 0.1);
+}
+
+.intensity-option:hover,
+.mood-option:hover {
+    border-color: var(--primary);
+    background: rgba(255, 107, 157, 0.2);
+}
+
+.intensity-option input[type="radio"],
+.mood-option input[type="radio"] {
+    display: none;
+}
+
+.intensity-option input[type="radio"]:checked + .intensity-label,
+.mood-option input[type="radio"]:checked + .mood-label {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.intensity-option:has(input[type="radio"]:checked),
+.mood-option:has(input[type="radio"]:checked) {
+    border-color: var(--primary);
+    background: rgba(255, 107, 157, 0.3);
+}
+
+.intensity-label,
+.mood-label {
+    margin-left: 0;
+    transition: color var(--transition-fast);
+}
+
+/* Dark theme specific animations */
+.dark-theme .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 107, 157, 0.3);
+}
+
+.dark-theme .social-link {
+    background: var(--white);
+    border: 1px solid rgba(255, 107, 157, 0.3);
+}
+
+.dark-theme .social-link:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+}
+
+/* Modal styling for dark theme */
+.dark-theme .modal-content {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+/* Template cards in dark theme */
+.dark-theme .template-card {
+    transition: all var(--transition-normal);
+}
+
+.dark-theme .template-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 8px 30px rgba(255, 107, 157, 0.2);
+}
+
+/* Age verification specific styling */
+#ageVerificationModal .modal-content {
+    animation: fadeInScale 0.5s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Spicy content indicators */
+.spicy-indicator {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: linear-gradient(45deg, #e74c3c, #c0392b);
+    color: white;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: var(--spacing-sm);
+}
+
+/* Enhanced form styling for dark theme */
+.dark-theme .form-label {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.dark-theme input[type="checkbox"] {
+    accent-color: var(--primary);
+}
+
+/* Glowing effects for dark theme */
+.dark-theme .btn-primary {
+    box-shadow: 0 0 20px rgba(255, 107, 157, 0.3);
+}
+
+.dark-theme .btn-primary:hover {
+    box-shadow: 0 0 30px rgba(255, 107, 157, 0.5);
+}
+
+/* Dark theme scrollbar */
+.dark-theme ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dark-theme ::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+.dark-theme ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+.dark-theme ::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
+
